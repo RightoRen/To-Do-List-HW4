@@ -52,6 +52,7 @@ article {
     margin: 10px 12px 10px 12px;
     /* This rule simply repeats and both are valid and preference based */
     margin: 10px 12px;
+    width: 25%;
 
    text-align: left;  /* just moves it inside the element and does not take precedence as it is a child element not a parent*/
 }
@@ -62,6 +63,33 @@ article >h2 {
 }
 
 ul {
-    list-style: none;
+    list-style-type: none;
 }
 
+article :first-of-type {
+    border-color: white;
+}
+
+article :first-of-type h2 {
+    color: white;
+}
+ 
+#inprogress {border-color: red;}
+
+#inprogress h2 {color: red;}
+
+#done { border-color: green;}
+
+#done h2 {color: green;}
+
+ul li {
+    padding: 6px 8px;
+    text-transform: uppercase;
+}
+/* Child tag for the odd numbered ID tags */
+#todo li:nth-child(odd) { 
+        background-color: rgba(91, 91, 91, 0.5);
+}
+#inprogress li:nth-child(odd) {background-color: rgba(255, 0, 0, 0.5)}
+
+#done li:nth-child(odd) { background-color: rgba(0, 255, 0, 0.5);}
