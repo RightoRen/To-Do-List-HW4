@@ -93,3 +93,27 @@ ul li {
 #inprogress li:nth-child(odd) {background-color: rgba(255, 0, 0, 0.5)}
 
 #done li:nth-child(odd) { background-color: rgba(0, 255, 0, 0.5);}
+
+/* mobile first when developing*/
+
+/* Responsive Code try to write as little code as possible so it works across browsers, mobile, desktop etc*/
+
+article {
+    width: 100%;
+    margin: 10px 0px;
+}
+
+main {
+    margin: 0 12px;
+}
+
+/* media query: a rule you can use in css to lock css styling within the width of your browser */
+
+@media (min-width:960px) {
+    article {
+        width: 25%;
+        margin: 10px 12px;
+    }
+ 
+    main { margin: 0;}
+}
