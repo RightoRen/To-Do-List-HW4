@@ -1,0 +1,95 @@
+* {
+    border: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Reset all of the defaults to 0 so that you can write your own CSS All of the above should ALWAYS be present as to not rely on default browsers */
+
+.hidden {
+    display: none;
+}
+
+/* Always use a family along with the font that you want rather than just putting in helvetica as some people don't have access to said font, Google Fonts are a great resource for this! */
+
+body {
+    font-size: 16px;
+    background-color: black;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* the > command makes it so you are affecting the specific tag under a specific parent it is a rule of CSS it can be done to classes and such as well*/
+
+header >h1 {
+    text-align: center;
+    padding: 8px;
+}
+
+main { text-align: center; }
+
+
+/* Using just the border rule can be dangerous because it's less specific and can mess with things, the way you do it is up to you though */
+/* CSS is an acronymn for Cascading Style sheet */
+
+article {
+    border-radius: 4px;
+    border-style: dashed;
+    border-color: white;
+   
+    border: 8px solid gray;
+
+    display: inline-block;
+
+    margin-left: 12px;
+    margin-right: 12px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    /* Always goes top, right, bottom, left */
+    margin: 10px 12px 10px 12px;
+    /* This rule simply repeats and both are valid and preference based */
+    margin: 10px 12px;
+    width: 25%;
+
+   text-align: left;  /* just moves it inside the element and does not take precedence as it is a child element not a parent*/
+}
+
+article >h2 {
+    color: gray;
+    padding: 4px 8px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+article :first-of-type {
+    border-color: white;
+}
+
+article :first-of-type h2 {
+    color: white;
+}
+ 
+#inprogress {border-color: red;}
+
+#inprogress h2 {color: red;}
+
+#done { border-color: green;}
+
+#done h2 {color: green;}
+
+ul li {
+    padding: 6px 8px;
+    text-transform: uppercase;
+}
+/* Child tag for the odd numbered ID tags */
+#todo li:nth-child(odd) { 
+        background-color: rgba(91, 91, 91, 0.5);
+}
+#inprogress li:nth-child(odd) {background-color: rgba(255, 0, 0, 0.5)}
+
+#done li:nth-child(odd) { background-color: rgba(0, 255, 0, 0.5);}
