@@ -4,36 +4,72 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Working With CSS :,</title>
+    <title>An Honest Task List</title>
     <link rel="stylesheet" href="./css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {font-family: 'Cabin', sans-serif;}
+    </style>
 </head>
 
-<header>
-    <h1>Working with Cascade</h1>   
+<header id="decoration">
+    <h1>Getting My Life Together :D </h1>   
 </header>
 
 <body>
     <main>
 
-        <article id="todo"> 
-            <h2>To Dos</h2>
+        <article id="start"> 
+            <h2>Start</h2>
             <ul>
-                <li>item 1</li>
-                <li>item 2</li>
-                <li>item 3</li>
-                <li>item 4</li>
-                <li>item 5</li>
+                <li class="form-control">
+                    <div class="hidden"><input type="checkbox"></div>
+                    <p>Homework</p>
+                    </li>
+                    <li class="form-control">
+                        <div class="hidden"><input type="checkbox"></div>
+                    <p>Cry</p>                     
+                        </li>
+                        <li class="form-control">
+                            <div class="hidden"><input type="checkbox"></div>
+                    <p>Cook</p>                            
+                            </li>
+                            <li class="form-control">
+                                <div class="hidden"><input type="checkbox"></div>
+                    <span>Sleep</span>
+                                </li>
+                                <li class="form-control">
+                                    <div class="hidden"><input type="checkbox"></div>
+                                    <span>Class</span>
+                                    </li>
             </ul>
         </article>
         
         <article id="inprogress">
             <h2>In Progress</h2>
             <ul>
-                <li>item 1</li>
-                <li>item 2</li>
-                <li>item 3</li>
-                <li>item 4</li>
-                <li>item 5</li>
+                <li class="form-control">
+                    <input type="checkbox" name="checkbox">
+                    <span class="checkmark">Run From Problems</span> 
+                    </li>
+                    <li class="form-control">
+                        <input type="checkbox" name="checked">
+                        <span class="checkmark">Avoid Homework</span>                       
+                        </li>
+                        <li class="form-control">
+                            <input type="checkbox" name="checked">
+                            <span class="checkmark">Think About Being Rich</span>                             
+                            </li>
+                            <li class="form-control">
+                                <input type="checkbox" name="checked">
+                                <span class="checkmark">Start A Boy Band</span> 
+                                </li>
+                                <li class="form-control">
+                                    <input type="checkbox" name="checked">
+                                    <span class="checkmark">Watch The Same Show Again</span> 
+                                    </li>
             </ul>
         </article>
 
@@ -41,11 +77,27 @@
         <article id="done">
             <h2>Done</h2>
             <ul>
-                <li>item 1</li>
-                <li>item 2</li>
-                <li>item 3</li>
-                <li>item 4</li>
-                <li>item 5</li>
+                <li class="form-control">
+                    <input type="checkbox" name="checkbox">
+                    <span class="checkmark">Cause Chaos</span>          
+                    </li>
+                    <li class="form-control">
+                        <input type="checkbox" name="checked">
+                        <span class="checkmark">Eat Yummy Food</span>                         
+                        </li>
+                        <li class="form-control">
+                            <input type="checkbox" name="checked">
+                            <span class="checkmark">Pet The Kitty</span>                          
+                            </li>
+                            <li class="form-control">
+                                <input type="checkbox" name="checked">
+                                <span class="checkmark">Drink Water</span> 
+                               
+                                </li>
+                                <li class="form-control">
+                                    <input type="checkbox" name="checked">
+                                    <span class="checkmark">Finish To Do List</span> 
+                                    </li>
             </ul>
         </article>
 
