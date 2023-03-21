@@ -15,20 +15,33 @@
 
 body {
     font-size: 16px;
-    background-color: black;
-    color: white;
-    font-family: Arial, Helvetica, sans-serif;
-}
+    background-image: url(../img/stars_background.jpg);
+    background-size: cover;
+    font-family: 'Cabin', sans-serif;}
 
 
 /* the > command makes it so you are affecting the specific tag under a specific parent it is a rule of CSS it can be done to classes and such as well*/
 
+header {
+    background-color: pink;
+    color: rgb(85, 30, 39);
+}
+
+#decoration {
+    border: 8px;
+    border-style: solid;
+    border-color: rgb(221, 111, 139);
+    padding: 10px 15px;
+    text-decoration: underline rgb(73, 23, 52) solid;
+}
+
 header >h1 {
     text-align: center;
     padding: 8px;
+    font-weight: bold;
 }
 
-main { text-align: center; }
+main { text-align: center;}
 
 
 /* Using just the border rule can be dangerous because it's less specific and can mess with things, the way you do it is up to you though */
@@ -36,63 +49,98 @@ main { text-align: center; }
 
 article {
     border-radius: 4px;
-    border-style: dashed;
-    border-color: white;
-   
-    border: 8px solid gray;
-
     display: inline-block;
+    padding: 30px;
 
-    margin-left: 12px;
-    margin-right: 12px;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    
+    background-image: url(../img/prettynote.png);
+    background-position: auto;
+    background-repeat: no-repeat;
+    background-size: cover;
 
     /* Always goes top, right, bottom, left */
-    margin: 10px 12px 10px 12px;
+    
     /* This rule simply repeats and both are valid and preference based */
-    margin: 10px 12px;
+    
     width: 25%;
 
    text-align: left;  /* just moves it inside the element and does not take precedence as it is a child element not a parent*/
 }
-
+.form-control {
+    padding: 5px;
+    display: grid;
+    grid-template-columns: 1em auto;
+    gap: 0.5em;
+}
 article >h2 {
-    color: gray;
-    padding: 4px 8px;
+    color: rgb(51, 11, 28);
+    padding: 12px 8px;
+    font-weight: bold;
+    text-decoration: underline solid currentColor;
 }
 
 ul {
     list-style-type: none;
 }
 
-article :first-of-type {
-    border-color: white;
+
+
+.container {
+    background-color: rgba(238, 130, 238, 0.377);
 }
 
-article :first-of-type h2 {
-    color: white;
+input[type="checkbox"] {
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: #fff;
+    margin: 0;
+    font: inherit;
+    color: currentColor;
+    width: 1.15em;
+    height: 1.15em;
+    border: 0.20em solid rgb(71, 33, 39);
+    border-radius: 0.20em;
+    transform: translateY(-0.075em);
+
+    display: grid;
+    place-content: center;
 }
- 
-#inprogress {border-color: red;}
 
-#inprogress h2 {color: red;}
+input[type="checkbox"]::before {
+    content: "";
+    width: 0.60em;
+    height: 0.60em;
+    transform: scale(0);
+    transition: 120ms ease-in-out;
+    box-shadow: inset 1em 1em var(--form-control-color);
+    background-color: CanvasText;
+    transform-origin: bottom left;
+    clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+}
 
-#done { border-color: green;}
+input[type="checkbox"]:checked::before {transform: scale(1);}
 
-#done h2 {color: green;}
+input[type="checkbox"]:focus {
+    outline: max(1px, 0.10em) solid currentColor;
+    outline-offset: max(1px, 0.10em);
+}
 
 ul li {
     padding: 6px 8px;
-    text-transform: uppercase;
+    text-transform: none;
 }
-/* Child tag for the odd numbered ID tags */
-#todo li:nth-child(odd) { 
-        background-color: rgba(91, 91, 91, 0.5);
-}
-#inprogress li:nth-child(odd) {background-color: rgba(255, 0, 0, 0.5)}
 
-#done li:nth-child(odd) { background-color: rgba(0, 255, 0, 0.5);}
+/* Child tag for the odd numbered ID tags */
+#start li:nth-child(odd) { 
+    background-color: rgba(180, 170, 73, 0.5);
+        display: inline-flex;}
+
+#inprogress li:nth-child(odd) {
+    background-color: rgba(180, 170, 73, 0.5);
+    display: inline-flex;}
+
+#done li:nth-child(odd) { background-color: rgba(180, 170, 73, 0.5);
+    display: inline-flex;}
 
 /* mobile first when developing*/
 
